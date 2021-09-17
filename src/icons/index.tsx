@@ -8,3 +8,4 @@ export * from "./TimeIcon";
 export * from "./PlusIcon";
 export * from "./MinusIcon";
 export * from "./ArrowDownIcon";
+export * from "./SearchIcon";

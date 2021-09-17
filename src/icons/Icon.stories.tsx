@@ -11,6 +11,7 @@ import { TimeIcon } from "./TimeIcon";
 import { PlusIcon } from "./PlusIcon";
 import { MinusIcon } from "./MinusIcon";
 import { ArrowDownIcon } from "./ArrowDownIcon";
+import { SearchIcon } from "./SearchIcon";
 
 export default {
   title: 'Icons',
@@ -33,3 +34,4 @@ export const Time = (args) => <TimeIcon {...args} />;
 export const Plus = (args) => <PlusIcon {...args} />;
 export const Minus = (args) => <MinusIcon {...args} />;
 export const ArrowDown = (args) => <ArrowDownIcon {...args} />;
+export const Search = (args) => <SearchIcon {...args} />;
