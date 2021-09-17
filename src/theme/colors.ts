@@ -6,4 +6,4 @@ export const colors = {
     gandalf: "#979197",
     teflon: "#554d56",
     white: "#fff",
-}
+};

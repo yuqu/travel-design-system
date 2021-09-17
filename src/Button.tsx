@@ -1,17 +1,42 @@
 import React from "react";
-import styled from "styled-components";
+import { styled } from "./styled";
 
-export const Button = styled.button`
+interface ButtonProps {
+  variant?: "primary" | "secondary";
+}
+
+export const Button = styled.button<ButtonProps>`
   padding: 10px 56px;
-  background-color: ${({theme}) => theme.colors.pink};
-  ${({theme}) => theme.colors.pink};
+  background-color: ${({
+    theme,
+    variant
+  }) => {
+    switch (variant) {
+      case "secondary":
+        return "rgba(193, 190, 193, 0.75)";
+      case "primary":
+      default:
+        return theme.colors.pink;
+    }
+  }};
   border-radius: 6px;
   border: none;
   font-family: "Open Sans", monospace;
   font-size: 17px;
   font-weight: 600;
   text-align: center;
-  color: #fff;
+  color: ${({
+    theme,
+    variant
+  }) => {
+    switch (variant) {
+      case "secondary":
+        return theme.colors.teflon;
+      case "primary":
+      default:
+        return "#fff";
+    }
+  }};
   
   &:active {
     padding: 6px 52px;
@@ -19,6 +44,16 @@ export const Button = styled.button`
   }
   
   &:disabled {
-    background-color: #e7bcc6;
+    background-color: ${({
+      variant
+    }) => {
+      switch (variant) {
+        case "secondary":
+          return "rgba(193, 190, 193, 0.75)";
+        case "primary":
+        default:
+          return "#e7bcc6";
+      }
+    }};
   }
 `

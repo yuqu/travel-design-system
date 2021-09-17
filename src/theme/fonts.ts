@@ -48,4 +48,4 @@ export const fonts = {
     font-size: 12px;
     color: #554d56;
   `
-}
+};

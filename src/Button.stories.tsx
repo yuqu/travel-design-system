@@ -12,7 +12,7 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  primary: true,
+  variant: "primary",
   children: 'Title',
   disabled: false
 };
@@ -31,7 +31,9 @@ Primary.parameters = {
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  children: 'Button'
+  variant: "secondary",
+  children: 'Title',
+  disabled: false
 };
 
 export const Large = Template.bind({});
