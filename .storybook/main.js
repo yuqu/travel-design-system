@@ -4,7 +4,7 @@ module.exports = {
     "../src/**/*.stories.@(js|jsx|ts|tsx)"
   ],
   "addons": [
-    "storybook-zeplin",
+    "storybook-zeplin/register",
     "@storybook/addon-links",
     "@storybook/addon-essentials"
   ]
