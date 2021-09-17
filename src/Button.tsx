@@ -2,7 +2,7 @@ import React from "react";
 import { styled } from "./styled";
 
 interface ButtonProps {
-  variant?: "primary" | "secondary" | "tertiary";
+  variant?: "primary" | "secondary" | "tertiary" | "warning";
 }
 
 export const Button = styled.button<ButtonProps>`
@@ -12,6 +12,7 @@ export const Button = styled.button<ButtonProps>`
     switch (variant) {
       case "tertiary":
         return "8px 54px";
+      case "warning":
       case "secondary":
       case "primary":
       default:
@@ -23,6 +24,8 @@ export const Button = styled.button<ButtonProps>`
     variant
   }) => {
     switch (variant) {
+      case "warning":
+        return "#fe3f4d";
       case "tertiary":
         return "transparent";
       case "secondary":
@@ -40,6 +43,7 @@ export const Button = styled.button<ButtonProps>`
     switch (variant) {
       case "tertiary":
         return `solid 2px ${theme.colors.pink}`;
+      case "warning":
       case "secondary":
       case "primary":
       default:
@@ -59,9 +63,10 @@ export const Button = styled.button<ButtonProps>`
         return theme.colors.pink;
       case "secondary":
         return theme.colors.teflon;
+      case "warning":
       case "primary":
       default:
-        return "#fff";
+        return theme.colors.white;
     }
   }};
   
@@ -74,6 +79,7 @@ export const Button = styled.button<ButtonProps>`
       switch (variant) {
         case "tertiary":
           return `solid 4px ${theme.colors.pink}`;
+        case "warning":
         case "secondary":
         case "primary":
         default:
@@ -88,6 +94,8 @@ export const Button = styled.button<ButtonProps>`
       variant
     }) => {
       switch (variant) {
+        case "warning":
+          return "#dd424f"
         case "tertiary":
           return "transparent";
         case "secondary":

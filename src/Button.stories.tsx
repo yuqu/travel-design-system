@@ -43,8 +43,9 @@ Tertiary.args = {
   disabled: false
 };
 
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  children: 'Button',
+export const Warning = Template.bind({});
+Warning.args = {
+  variant: "warning",
+  children: 'Title',
+  disabled: false
 };
