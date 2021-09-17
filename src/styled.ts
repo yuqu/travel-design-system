@@ -2,4 +2,4 @@ import baseStyled, { ThemedStyledInterface, useTheme as baseUseTheme } from "sty
 import { Theme } from "./theme";
 
 export const styled: ThemedStyledInterface<Theme> = baseStyled;
-export const useTheme: () => Theme = baseUseTheme;
+export const useTheme: () => Theme = baseUseTheme as () => Theme;

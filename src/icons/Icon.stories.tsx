@@ -9,6 +9,7 @@ import { RestaurantIcon } from "./RestaurantIcon";
 import { WeatherIcon } from "./WeatherIcon";
 import { TimeIcon } from "./TimeIcon";
 import { PlusIcon } from "./PlusIcon";
+import { MinusIcon } from "./MinusIcon";
 import { ArrowDownIcon } from "./ArrowDownIcon";
 
 export default {
@@ -30,4 +31,5 @@ export const Restaurant = (args) => <RestaurantIcon {...args} />;
 export const Weather = (args) => <WeatherIcon {...args} />;
 export const Time = (args) => <TimeIcon {...args} />;
 export const Plus = (args) => <PlusIcon {...args} />;
+export const Minus = (args) => <MinusIcon {...args} />;
 export const ArrowDown = (args) => <ArrowDownIcon {...args} />;

@@ -6,4 +6,5 @@ export * from "./RestaurantIcon";
 export * from "./WeatherIcon";
 export * from "./TimeIcon";
 export * from "./PlusIcon";
+export * from "./MinusIcon";
 export * from "./ArrowDownIcon";
