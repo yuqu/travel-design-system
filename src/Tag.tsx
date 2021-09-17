@@ -1,18 +1,10 @@
 import React from "react";
 import { styled } from "./styled";
 
-interface TagProps {
-  selected?: boolean;
-}
-
-export const Tag = styled.button<TagProps>`
+export const Tag = styled.button`
   padding: 6px 18px;
   border-radius: 6px;
-  background-color: ${({ selected }) => (
-    selected
-      ? "#419bf9"
-      : "#edeced"
-  )};
+  background-color: #edeced;
   border: none;
   font-family: "Open Sans", monospace;
   font-size: 18px;
@@ -22,13 +14,14 @@ export const Tag = styled.button<TagProps>`
   line-height: normal;
   letter-spacing: normal;
   text-align: center;
-  color: ${({ theme, selected }) => (
-    selected
-      ? theme.colors.white
-      : theme.colors.gandalf
-  )};
-  
+  color: ${({ theme }) => theme.colors.gandalf};
+
   &:hover {
     background-color: #d4d1d4;
+  }
+
+  &:focus {
+    background-color: #419bf9;
+    color: ${({ theme }) => theme.colors.white};
   }
 `;

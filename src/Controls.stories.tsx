@@ -11,8 +11,7 @@ export default {
 
 export const Tag = (args) => <TagComponent {...args}/>;
 Tag.args = {
-  children: "Title",
-  selected: false
+  children: "Title"
 }
 
 export const Stepper = (args) => <StepperComponent {...args}/>;

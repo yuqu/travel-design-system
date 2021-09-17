@@ -70,7 +70,7 @@ export const Button = styled.button<ButtonProps>`
     }
   }};
   
-  &:active {
+  &:focus {
     padding: 6px 52px;
     border: ${({
      theme,
