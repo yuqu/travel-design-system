@@ -14,6 +14,7 @@ export const Primary = Template.bind({});
 Primary.args = {
   primary: true,
   children: 'Title',
+  disabled: false
 };
 Primary.parameters = {
   zeplinLink: [{
@@ -30,7 +31,7 @@ Primary.parameters = {
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  children: 'Button',
+  children: 'Button'
 };
 
 export const Large = Template.bind({});

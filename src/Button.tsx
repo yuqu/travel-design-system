@@ -12,4 +12,13 @@ export const Button = styled.button`
   font-weight: 600;
   text-align: center;
   color: #fff;
+  
+  &:active {
+    padding: 6px 52px;
+    border: solid 4px rgba(85, 77, 86, 0.25);
+  }
+  
+  &:disabled {
+    background-color: #e7bcc6;
+  }
 `
