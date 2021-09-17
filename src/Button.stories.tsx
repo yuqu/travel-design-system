@@ -36,10 +36,11 @@ Secondary.args = {
   disabled: false
 };
 
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  children: 'Button',
+export const Tertiary = Template.bind({});
+Tertiary.args = {
+  variant: "tertiary",
+  children: 'Title',
+  disabled: false
 };
 
 export const Small = Template.bind({});

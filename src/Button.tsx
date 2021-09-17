@@ -2,16 +2,29 @@ import React from "react";
 import { styled } from "./styled";
 
 interface ButtonProps {
-  variant?: "primary" | "secondary";
+  variant?: "primary" | "secondary" | "tertiary";
 }
 
 export const Button = styled.button<ButtonProps>`
-  padding: 10px 56px;
+  padding: ${({
+    variant
+  }) => {
+    switch (variant) {
+      case "tertiary":
+        return "8px 54px";
+      case "secondary":
+      case "primary":
+      default:
+        return "10px 56px";
+    }
+  }};
   background-color: ${({
     theme,
     variant
   }) => {
     switch (variant) {
+      case "tertiary":
+        return "transparent";
       case "secondary":
         return "rgba(193, 190, 193, 0.75)";
       case "primary":
@@ -20,7 +33,19 @@ export const Button = styled.button<ButtonProps>`
     }
   }};
   border-radius: 6px;
-  border: none;
+  border: ${({
+   theme,
+   variant
+  }) => {
+    switch (variant) {
+      case "tertiary":
+        return `solid 2px ${theme.colors.pink}`;
+      case "secondary":
+      case "primary":
+      default:
+        return "none";
+    }
+  }};
   font-family: "Open Sans", monospace;
   font-size: 17px;
   font-weight: 600;
@@ -30,6 +55,8 @@ export const Button = styled.button<ButtonProps>`
     variant
   }) => {
     switch (variant) {
+      case "tertiary":
+        return theme.colors.pink;
       case "secondary":
         return theme.colors.teflon;
       case "primary":
@@ -40,19 +67,34 @@ export const Button = styled.button<ButtonProps>`
   
   &:active {
     padding: 6px 52px;
-    border: solid 4px rgba(85, 77, 86, 0.25);
+    border: ${({
+     theme,
+     variant
+    }) => {
+      switch (variant) {
+        case "tertiary":
+          return `solid 4px ${theme.colors.pink}`;
+        case "secondary":
+        case "primary":
+        default:
+          return "solid 4px rgba(85, 77, 86, 0.25)";
+      }
+    }};
   }
-  
+
   &:disabled {
+    opacity: 0.5;
     background-color: ${({
       variant
     }) => {
       switch (variant) {
+        case "tertiary":
+          return "transparent";
         case "secondary":
           return "rgba(193, 190, 193, 0.75)";
         case "primary":
         default:
-          return "#e7bcc6";
+          return "#dd748d";
       }
     }};
   }
